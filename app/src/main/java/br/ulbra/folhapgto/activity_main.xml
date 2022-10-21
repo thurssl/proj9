@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/amarelo">
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="folha de pagamento"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:textSize="27sp"
+        android:textStyle="italic"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/edNome"
+        android:layout_below="@id/txtTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nome Funcionário"
+        android:background="@color/white"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/edSalBruto"
+        android:layout_below="@id/edNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Salário bruto"
+        android:background="@color/white"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"/>
+
+    <RadioGroup
+        android:layout_below="@id/edSalBruto"
+        android:id="@+id/rdGrupo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="10dp">
+        <LinearLayout
+            android:layout_centerHorizontal="true"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/masculino"
+            android:layout_width="120dp"
+            android:textSize="15dp"
+            android:layout_height="wrap_content"
+            android:text="Masculino"
+            />
+
+        <RadioButton
+            android:id="@+id/feminino"
+            android:layout_width="120dp"
+            android:textSize="15dp"
+            android:layout_height="wrap_content"
+            android:text="Feminino" />
+
+        <RadioButton
+            android:id="@+id/outro"
+            android:layout_width="120dp"
+            android:textSize="15dp"
+            android:layout_height="wrap_content"
+            android:text="Outro" />
+        </LinearLayout>
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/edNumFilhos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rdGrupo"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="50dp"
+        android:background="@color/white"
+        android:hint="Nº de filhos" />
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="160dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="30dp"
+        android:text="Calcular"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/purple_200"
+        android:layout_below="@id/edNumFilhos"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/txtResul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnCalcular"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Resultado:"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtResul" />
+
+</RelativeLayout>
